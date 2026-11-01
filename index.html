@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derrière le profil | Campagne contre la cyberintimidation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#1e3a8a',
+                        brandGreen: '#059669',
+                        brandYellow: '#f59e0b',
+                        brandLightBg: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brandLightBg text-slate-800 antialiased selection:bg-brandYellow selection:text-slate-900">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brandBlue to-brandGreen flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-shield-halved text-lg"></i>
+                </div>
+                <span
+                    class="text-xl font-bold bg-gradient-to-r from-brandBlue to-brandGreen bg-clip-text text-transparent">Derrière
+                    le profil</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#probleme" class="hover:text-brandBlue transition-colors">Le Problème</a>
+                <a href="#consequences" class="hover:text-brandBlue transition-colors">Conséquences</a>
+                <a href="#agir" class="hover:text-brandBlue transition-colors">Agir & Obtenir de l'aide</a>
+                <a href="#agir"
+                    class="bg-brandYellow hover:bg-amber-500 text-slate-900 font-semibold px-5 py-2.5 rounded-xl shadow-md transition-all transform hover:-translate-y-0.5">Besoin
+                    d'aide ?</a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="text-slate-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-3">
+            <a href="#probleme" class="block py-2 text-slate-600 hover:text-brandBlue font-medium">Le Problème</a>
+            <a href="#consequences" class="block py-2 text-slate-600 hover:text-brandBlue font-medium">Conséquences</a>
+            <a href="#agir" class="block py-2 text-slate-600 hover:text-brandBlue font-medium">Agir & Obtenir de
+                l'aide</a>
+            <a href="#agir"
+                class="block text-center bg-brandYellow hover:bg-amber-500 text-slate-900 font-semibold py-2.5 rounded-xl shadow-sm">Besoin
+                d'aide ?</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+        class="relative overflow-hidden bg-gradient-to-b from-blue-50/60 via-emerald-50/30 to-brandLightBg py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-brandBlue font-semibold text-xs sm:text-sm mb-6 shadow-sm">
+                <i class="fa-solid fa-bullhorn"></i> Campagne de sensibilisation scolaire
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">
+                Derrière le profil
+            </h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl font-medium text-brandGreen max-w-3xl mx-auto mb-10 italic">
+                « La cyberintimidation est virtuelle, la souffrance est réelle »
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#probleme"
+                    class="w-full sm:w-auto bg-brandBlue hover:bg-blue-900 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                    Découvrir la campagne <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#agir"
+                    class="w-full sm:w-auto bg-brandYellow hover:bg-amber-500 text-slate-900 font-semibold px-8 py-4 rounded-2xl shadow-md hover:shadow-lg transition-all">
+                    Trouver du soutien
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section: Le Problème -->
+        <section id="probleme" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Le Problème</h2>
+                    <div class="w-20 h-1.5 bg-brandBlue mx-auto rounded-full mb-6"></div>
+                    <p class="text-lg text-slate-600">Comprendre ce qu'est la cyberintimidation et mesurer son ampleur
+                        chez les jeunes.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Stat Card -->
+                    <div
+                        class="bg-gradient-to-br from-blue-900 to-brandBlue text-white p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 text-white/5 text-9xl font-bold pointer-events-none">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <span
+                            class="bg-brandYellow text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Statistique
+                            clé</span>
+                        <div class="text-5xl sm:text-6xl font-extrabold text-brandYellow my-6">Plus d'1 sur 10</div>
+                        <p class="text-lg sm:text-xl text-blue-100 font-light leading-relaxed">
+                            C'est la proportion de personnes touchées par l'intimidation ou la cyberintimidation au
+                            Québec selon les données officielles.
+                        </p>
+                        <p class="mt-4 text-xs text-blue-200/80 font-medium">— Source : Institut de la statistique du
+                            Québec</p>
+                    </div>
+
+                    <!-- Definition Box -->
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brandBlue text-white flex items-center justify-center shrink-0 shadow-md">
+                                <i class="fa-solid fa-laptop-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Qu'est-ce que la cyberintimidation ?
+                                </h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    C'est un comportement agressif et répété commis à l'aide des technologies numériques
+                                    (réseaux sociaux, messageries, jeux en ligne). Cela inclut le partage de photos
+                                    embarrassantes, la création de faux comptes, l'exclusion volontaire ou l'envoi de
+                                    messages haineux.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-start space-x-4 bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brandGreen text-white flex items-center justify-center shrink-0 shadow-md">
+                                <i class="fa-solid fa-fingerprint text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Une empreinte permanente</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Contrairement au harcèlement physique, ce qui est publié en ligne peut être copié,
+                                    partagé et persister pendant des années, amplifiant la détresse de la personne
+                                    visée.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Les Conséquences -->
+        <section id="consequences" class="py-20 bg-brandLightBg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Les Conséquences</h2>
+                    <div class="w-20 h-1.5 bg-brandGreen mx-auto rounded-full mb-6"></div>
+                    <p class="text-lg text-slate-600">Quels sont les impacts de la cyberintimidation sur le bien-être
+                        des adolescents ?</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Santé mentale -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-blue-100 text-brandBlue flex items-center justify-center text-2xl mb-6 shadow-sm">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Santé mentale fragile</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Sentiment d'anxiété accru, baisse d'estime de soi, stress permanent et, dans les cas
+                                graves, épisodes dépressifs profonds liés au sentiment d'impuissance.
+                            </p>
+                        </div>
+                        <div
+                            class="mt-8 pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                            Impact psychologique</div>
+                    </div>
+
+                    <!-- Card 2: Sommeil -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-emerald-100 text-brandGreen flex items-center justify-center text-2xl mb-6 shadow-sm">
+                                <i class="fa-solid fa-moon"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Perturbation du sommeil</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                L'hyperconnexion et la peur constante de router ou de voir de nouveaux messages néfastes
+                                nuisent grandement à la qualité et au nombre d'heures de sommeil.
+                            </p>
+                        </div>
+                        <div
+                            class="mt-8 pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                            Impact physique</div>
+                    </div>
+
+                    <!-- Card 3: Isolement et École -->
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Isolement & Scolarité</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Repli sur soi, évitement des activités sociales, baisse de motivation scolaire,
+                                absentéisme et difficulté à se concentrer en classe.
+                            </p>
+                        </div>
+                        <div
+                            class="mt-8 pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                            Impact social</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Agir & Obtenir de l'aide -->
+        <section id="agir" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Agir & Obtenir de l'aide</h2>
+                    <div class="w-20 h-1.5 bg-brandYellow mx-auto rounded-full mb-6"></div>
+                    <p class="text-lg text-slate-600">Que tu sois victime ou témoin, tu as le pouvoir de changer les
+                        choses.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+                    <!-- Pour les victimes -->
+                    <div
+                        class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 sm:p-10 rounded-3xl border border-blue-100 shadow-sm">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brandBlue text-white flex items-center justify-center font-bold text-lg shadow-md">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">Conseils pour les victimes</h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-700">
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                                <span><strong>Ne réponds pas :</strong> Répondre risque d'envenimer la situation. Bloque
+                                    l'utilisateur.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                                <span><strong>Conserve des preuves :</strong> Fais des captures d'écran (screen) des
+                                    messages ou publications offensantes.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                                <span><strong>Parle-en :</strong> Confie-toi immédiatement à un adulte de confiance
+                                    (parent, enseignant, intervenant scolaire).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pour les témoins -->
+                    <div
+                        class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 sm:p-10 rounded-3xl border border-emerald-100 shadow-sm">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brandGreen text-white flex items-center justify-center font-bold text-lg shadow-md">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">Conseils pour les témoins</h3>
+                        </div>
+                        <ul class="space-y-4 text-slate-700">
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandGreen mt-1"></i>
+                                <span><strong>Ne participe pas :</strong> Ne clique jamais sur "J'aime", ne partage pas
+                                    et ne commente pas une publication malveillante.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandGreen mt-1"></i>
+                                <span><strong>Soutiens la victime :</strong> Envoie un message privé rassurant à la
+                                    personne touchée pour lui montrer qu'elle n'est pas seule.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandGreen mt-1"></i>
+                                <span><strong>Signale :</strong> Utilise les outils de signalement de la plateforme ou
+                                    avertis l'école.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ressources d'aide -->
+                <div class="bg-slate-900 text-white p-8 sm:p-12 rounded-3xl shadow-xl">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <span
+                            class="bg-brandYellow text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ressources
+                            disponibles</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold mt-4 mb-6">Besoin d'aide ou d'écoute ?</h3>
+                        <p class="text-slate-300 mb-8 leading-relaxed">
+                            Ne reste jamais seul avec ce poids. Des professionnels sont là pour t'écouter de façon
+                            confidentielle et gratuite.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                            <div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+                                <h4 class="font-bold text-brandYellow mb-1"><i class="fa-solid fa-school mr-2"></i>À
+                                    l'école secondaire</h4>
+                                <p class="text-sm text-slate-300">Consulte ton intervenant, ton psychoéducateur, ton
+                                    éducateur spécialisé ou un enseignant de confiance.</p>
+                            </div>
+                            <div class="bg-white/10 p-6 rounded-2xl border border-white/10">
+                                <h4 class="font-bold text-brandYellow mb-1"><i class="fa-solid fa-phone mr-2"></i>Lignes
+                                    d'aide externes</h4>
+                                <p class="text-sm text-slate-300">Tel-Jeunes (1 800 263-2266 ou texto au 514 600-1002)
+                                    ou Jeunesse, J'écoute (1 800 668-6868).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brandBlue to-brandGreen flex items-center justify-center text-white">
+                        <i class="fa-solid fa-shield-halved text-sm"></i>
+                    </div>
+                    <span class="text-white font-bold text-lg">Derrière le profil</span>
+                </div>
+                <div class="text-sm text-center md:text-right">
+                    <p class="text-slate-300 font-medium mb-1">Campagne de sensibilisation contre l'intimidation</p>
+                    <p class="text-xs text-slate-500">Français, langue d'enseignement — Secondaire 4</p>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-900 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Campagne Derrière le profil. Tous droits réservés.</p>
+                <div class="flex flex-wrap gap-4 text-slate-500">
+                    <span>Sources officielles :</span>
+                    <a href="https://www.inspq.qc.ca/intimidation/jeunes/cyberintimidation" target="_blank"
+                        class="hover:text-brandYellow transition-colors underline">INSPQ</a>
+                    <a href="https://statistique.quebec.ca" target="_blank"
+                        class="hover:text-brandYellow transition-colors underline">Statistique Québec</a>
+                    <a href="https://www.unicef.org" target="_blank"
+                        class="hover:text-brandYellow transition-colors underline">UNICEF</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive script for mobile menu toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
